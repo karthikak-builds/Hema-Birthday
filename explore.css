@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+body {
+
+    background: #0a0a1f;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+/* HEADER */
+.header {
+
+    text-align: center;
+    padding: 25px;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.header h2 {
+
+    background: linear-gradient(90deg, #ffffff, #c9a9ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 15px rgba(200, 160, 255, 0.6);
+    animation: glowText 3s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 10px #b48cff;
+    }
+
+    to {
+        text-shadow: 0 0 25px #ffffff, 0 0 40px #b48cff;
+    }
+}
+
+/* GALLERY */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 35px;
+
+    padding: 50px 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+/* POLAROID */
+
+.polaroid {
+
+    background: white;
+    padding: 10px 10px 30px 10px;
+    border-radius: 6px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transform: rotate(-2deg);
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+
+.polaroid img {
+
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    border-radius: 4px;
+
+}
+
+.polaroid p {
+
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.polaroid:hover {
+
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+}
+
+/* RANDOM ROTATIONS */
+
+.p2 {
+    transform: rotate(3deg);
+}
+
+.p3 {
+    transform: rotate(-4deg);
+}
+
+.p4 {
+    transform: rotate(2deg);
+}
+
+.p5 {
+    transform: rotate(-3deg);
+}
+
+.p6 {
+    transform: rotate(4deg);
+}
+
+
+/* HERO MESSAGE */
+
+.hero {
+
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+
+}
+
+.glass-box {
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+
+}
+
+.video-btn {
+
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #8a5cf6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+/* VIDEO MODAL */
+/* VIDEO TOP CONTROLS */
+
+.video-controls {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.close {
+
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+
+}
+
+
+/* MORE SURPRISE BUTTON */
+
+.more-btn {
+
+    padding: 6px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #8a5cf6;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.more-btn:hover {
+
+    background: #6d45c6;
+
+}
+
+.video-modal {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video-box {
+
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+video {
+
+    width: 500px;
+    max-width: 90vw;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 15px;
+
+    opacity: 0.7;
+
+    z-index: 2;
+
+}
+
+.close {
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+/* Tablet */
+
+@media (max-width:900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 20px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .header {
+        font-size: 22px;
+    }
+
+}

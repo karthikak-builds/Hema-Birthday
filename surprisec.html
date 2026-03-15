@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Letter</title>
+    <link rel="stylesheet" href="surprise.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <h1 class="title">A Letter For You 💌</h1>
+
+    <audio id="music" src="song.mp3" loop></audio>
+
+    <script>
+        window.addEventListener("load", function () {
+            const music = document.getElementById("music");
+            music.play().catch(() => {
+                console.log("Autoplay blocked by browser");
+            });
+        });
+    </script>
+
+    <div class="stars"></div>
+
+    <div class="scene">
+
+        <div class="envelope" id="envelope">
+
+            <div class="flap"></div>
+
+            <div class="front">
+                <span class="open-text">Open Me 💌</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="letter" id="letter">
+        <div class="paper">
+            <h2>🎂 Happy Birthday 🎂</h2><br>
+            <p class="pp">
+                Our friendship is one of the most beautiful things life has given me.
+                It started with simple conversations,
+                but slowly it became something I truly value every single day.
+            </p>
+
+            <p class="pp">
+                With you, even the smallest moments become memories.
+                Random talks, silly laughs, and those times we understood
+                each other without even saying a word those are the moments I will always treasure.
+            </p>
+
+            <p class="pp">
+                Thank you for always being there,
+                for listening when things felt heavy,
+                and for making me laugh when I needed it the most.
+            </p>
+            <p class="pp">
+                Real friendships are rare in this world,
+                but somehow I was lucky enough to find one in you.
+                And I will always be grateful for that.
+            </p>
+
+            <p class="pp">
+                No matter how busy life becomes,
+                or where the future takes us,
+                I hope our friendship continues to grow stronger
+                with every passing year.
+            </p>
+
+            <p class="pp">
+                I hope that whenever you think about our memories,
+                it brings a smile to your face the same way it does for me.
+            </p>
+
+            <p class="pp">
+                Thank you for being a friend who understands,
+                supports, and cares in ways that words can’t fully describe.
+            </p>
+
+            <p class="pp">
+                Life feels a little easier and a lot brighter
+                knowing that someone like you is part of my story.
+            </p>
+
+            <p class="pp">
+                I’m truly lucky to call you my friend.
+            </p>
+            <p class="pp">
+                No matter what happens in life,
+                I hope our friendship always stays the same
+                real, warm, and unforgettable. 💜
+            </p>
+            <p class="pp">
+                And once again Happy Birthday my dear friend 💜
+            </p>
+        </div>
+    </div>
+
+
+
+    <section class="memories">
+
+        <h2>Our Memories 📸</h2>
+
+        <div class="photos">
+
+            <div class="polaroid">
+                <img src="img1.jpg">
+                <span>Best Moment</span>
+            </div>
+
+            <div class="polaroid">
+                <img src="img2.jpg">
+                <span>Fun Day</span>
+            </div>
+
+            <div class="polaroid">
+                <img src="img3.jpg">
+                <span>Always Happy</span>
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+        <p>Made with love ❤️ and memories for someone truly special</p>
+    </footer>
+    <script src="surprise.js"></script>
+
+</body>
+
+</html>
